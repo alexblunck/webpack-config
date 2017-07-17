@@ -1,40 +1,32 @@
 /**
- * Webpack
- * Development
+ * Feature
+ * dev-server
  */
 
 const webpack = require('webpack')
 const OpenBrowserPlugin = require('open-browser-webpack-plugin')
-const sassRule = require('../rules/sass')
-
-const port = process.env.port || 8080
 
 module.exports = function (env) {
+    // Skip in production
+    if (env.production) {
+        return
+    }
+
+    const port = env.port || 8080
+
     return {
-        output: {
-            filename: '[name].js',
-            chunkFilename: '[name].js'
-        },
-        devtool: 'eval-source-map',
         devServer: {
             port: port,
             historyApiFallback: true,
             compress: true,
+            inline: true,
             hot: true,
             overlay: true,
+            stats: 'errors-only',
             clientLogLevel: 'none'
-        },
-        module: {
-            rules: [
-                sassRule({ production: false })
-            ]
         },
         plugins: [
             new webpack.NamedModulesPlugin(),
-            new webpack.EvalSourceMapDevToolPlugin({
-                filename: '[file].map',
-                exclude: ['vendor.js']
-            }),
             new webpack.HotModuleReplacementPlugin(),
             new OpenBrowserPlugin({
                 url: `http://localhost:${port}`,
