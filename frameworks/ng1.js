@@ -1,6 +1,6 @@
 /**
- * Rule
- * babel-ng1
+ * Framework
+ * ng1
  */
 
 module.exports = function (env) {

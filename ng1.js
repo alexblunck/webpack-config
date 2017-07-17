@@ -31,6 +31,7 @@ module.exports = function (env, options) {
         require('./features/dev-server')(env),
         require('./features/analyze')(env),
         require('./features/stats')(env),
-        require('./rules/babel-ng1')(env)
+        // Frameworks
+        require('./frameworks/ng1')(env)
     )
 }
