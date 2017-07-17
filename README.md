@@ -16,7 +16,8 @@ const config = require('./lib/webpack-config/ng1')
 module.exports = function (env) {
     return config(env, {
         name: pkg.name,
-        root: __dirname
+        root: __dirname,
+        port: 8080
     })
 }
 ```
