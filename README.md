@@ -45,3 +45,12 @@ Configuration for AngularJs 1.x projects
 ```bash
 yarn add --dev --exact babel-plugin-angularjs-annotate
 ```
+
+## Config - react
+
+Configuration for react projects
+
+#### Specific Dependencies
+```bash
+yarn add --dev --exact babel-preset-react babel-plugin-transform-react-jsx-img-import
+```
