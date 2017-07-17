@@ -22,16 +22,15 @@ module.exports = function (env, options) {
         require('./features/clean')(env),
         require('./features/index-html')(env),
         require('./features/vendor-chunk')(env),
+        require('./features/html')(env),
         require('./features/sass')(env),
+        require('./features/svg')(env),
         require('./features/sourcemaps')(env),
         require('./features/compress')(env),
         require('./features/zip')(env),
         require('./features/dev-server')(env),
         require('./features/analyze')(env),
         require('./features/stats')(env),
-        // Rules
-        require('./rules/html')(env),
-        require('./rules/svg')(env),
         require('./rules/babel-ng1')(env)
     )
 }
