@@ -8,6 +8,7 @@ const merge = require('webpack-merge')
 const defaults = {
     name: null,
     root: null,
+    port: null,
     production: false,
     analyze: false,
     profile: false
