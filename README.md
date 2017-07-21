@@ -38,6 +38,7 @@ module.exports = function (env) {
 yarn add --dev --exact autoprefixer babel-core babel-loader babel-plugin-syntax-dynamic-import babel-preset-env chunk-manifest-webpack-plugin clean-webpack-plugin compression-webpack-plugin css-loader extract-text-webpack-plugin file-loader git-repo-info html-loader html-webpack-plugin inline-chunk-manifest-html-webpack-plugin node-sass open-browser-webpack-plugin postcss-loader sass-lint sass-loader serve stats-webpack-plugin style-loader svg-inline-loader webpack webpack-bundle-analyzer webpack-dev-server webpack-md5-hash webpack-merge zip-webpack-plugin
 ```
 
+
 ## Config - ng1
 
 Configuration for AngularJs 1.x projects
@@ -46,6 +47,17 @@ Configuration for AngularJs 1.x projects
 ```bash
 yarn add --dev --exact babel-plugin-angularjs-annotate
 ```
+
+
+## Config - ng
+
+Configuration for Angular 2+ projects
+
+#### Specific Dependencies
+```bash
+yarn add --dev --exact ts-loader typescript
+```
+
 
 ## Config - react
 
