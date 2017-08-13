@@ -64,5 +64,33 @@ const config = require('./lib/webpack-config/react')
 
 **Specific Dependencies**
 ```bash
+npm install react-hot-loader@3.0.0-beta.7
 npm install --save-dev --save-exact babel-preset-react babel-plugin-transform-react-jsx-img-import
+```
+
+**Hot Module Replacement**
+
+Wrap your root application component in an `AppContainer` component & modify your dom rendering logic similar to the following:
+```js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
+import App from './components/App'
+
+const render = () => {
+    ReactDOM.render(
+        <AppContainer>
+            <App />
+        </AppContainer>,
+        document.getElementById('app')
+    )
+}
+
+// Render to the dom
+render()
+
+// Hot Module Replacement API
+if (module.hot) {
+    module.hot.accept('./components/App', render)
+}
 ```
