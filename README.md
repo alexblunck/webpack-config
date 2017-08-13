@@ -94,3 +94,13 @@ if (module.hot) {
     module.hot.accept('./components/App', render)
 }
 ```
+
+### Config - Vue 2+
+```js
+const config = require('./lib/webpack-config/vue')
+```
+
+**Specific Dependencies**
+```bash
+npm install --save-dev --save-exact vue-loader
+```
