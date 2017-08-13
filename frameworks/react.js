@@ -4,13 +4,27 @@
  */
 
 module.exports = function (env) {
+    const entry = {
+        app: [ './src/index.jsx' ]
+    }
+
+    const plugins = [
+        'syntax-dynamic-import',
+        'transform-react-jsx-img-import'
+    ]
+
+    // Hot module replacement
+    if (!env.production) {
+        entry.app.unshift('react-hot-loader/patch')
+        plugins.unshift('react-hot-loader/babel')
+    }
+
     return {
-        entry: {
-            app: './src/index.jsx',
-        },
+        entry: entry,
         resolve: {
             extensions: ['.js', '.jsx']
         },
+        devtool: 'eval',
         module: {
             rules: [
                 {
@@ -28,10 +42,7 @@ module.exports = function (env) {
                             }],
                             'react'
                         ],
-                        plugins: [
-                            'syntax-dynamic-import',
-                            'transform-react-jsx-img-import'
-                        ]
+                        plugins: plugins
                     }
                 }
             ]
