@@ -4,7 +4,6 @@
  */
 
 const webpack = require('webpack')
-const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 
 module.exports = function (env) {
     // Skip in production
@@ -23,15 +22,12 @@ module.exports = function (env) {
             hot: true,
             overlay: true,
             stats: 'errors-only',
-            clientLogLevel: 'none'
+            clientLogLevel: 'none',
+            open: 'Google Chrome'
         },
         plugins: [
             new webpack.NamedModulesPlugin(),
-            new webpack.HotModuleReplacementPlugin(),
-            new OpenBrowserPlugin({
-                url: `http://localhost:${port}`,
-                browser: 'Google Chrome'
-            })
+            new webpack.HotModuleReplacementPlugin()
         ]
     }
 }
