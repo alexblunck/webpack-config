@@ -11,7 +11,8 @@ const defaults = {
     port: null,
     production: false,
     analyze: false,
-    profile: false
+    profile: false,
+    zip: false
 }
 
 module.exports = function (env, options) {

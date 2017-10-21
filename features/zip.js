@@ -12,7 +12,7 @@ module.exports = function (env) {
     }
 
     // Skip in development
-    if (!env.production) {
+    if (!env.production && !env.zip) {
         return
     }
 
