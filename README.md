@@ -64,8 +64,7 @@ const config = require('./lib/webpack-config/react')
 
 **Specific Dependencies**
 ```bash
-npm install react-hot-loader@3.0.0-beta.7
-npm install --save-dev --save-exact babel-preset-react babel-plugin-transform-react-jsx-img-import
+npm install --save-dev --save-exact babel-preset-react babel-plugin-transform-react-jsx-img-import react-hot-loader
 ```
 
 **Hot Module Replacement**
