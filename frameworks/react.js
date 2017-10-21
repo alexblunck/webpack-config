@@ -8,7 +8,7 @@ module.exports = function (env) {
         app: [ './src/index.jsx' ]
     }
 
-    const plugins = [
+    const babelPlugins = [
         'syntax-dynamic-import',
         'transform-react-jsx-img-import'
     ]
@@ -16,7 +16,7 @@ module.exports = function (env) {
     // Hot module replacement
     if (!env.production) {
         entry.app.unshift('react-hot-loader/patch')
-        plugins.unshift('react-hot-loader/babel')
+        babelPlugins.unshift('react-hot-loader/babel')
     }
 
     return {
@@ -42,7 +42,7 @@ module.exports = function (env) {
                             }],
                             'react'
                         ],
-                        plugins: plugins
+                        plugins: babelPlugins
                     }
                 }
             ]
