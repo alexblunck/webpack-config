@@ -24,7 +24,6 @@ module.exports = function (env) {
         resolve: {
             extensions: ['.js', '.jsx']
         },
-        devtool: 'eval',
         module: {
             rules: [
                 {
