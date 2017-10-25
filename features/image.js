@@ -10,7 +10,7 @@ module.exports = function (env) {
         module: {
             rules: [
                 {
-                    test: /\.png$/,
+                    test: /\.(png|gif|mov)$/,
                     loader: 'file-loader',
                     include: path.resolve(env.root, 'src')
                 }
