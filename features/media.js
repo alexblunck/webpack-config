@@ -1,6 +1,6 @@
 /**
  * Feature
- * images
+ * media
  */
 
 const path = require('path')
@@ -10,7 +10,7 @@ module.exports = function (env) {
         module: {
             rules: [
                 {
-                    test: /\.(png|gif|mov)$/,
+                    test: /\.(png|gif|mp4)$/,
                     loader: 'file-loader',
                     include: path.resolve(env.root, 'src')
                 }

@@ -27,7 +27,7 @@ module.exports = function (env, options) {
         require('./features/html')(env),
         require('./features/sass')(env),
         require('./features/svg')(env),
-        require('./features/image')(env),
+        require('./features/media')(env),
         require('./features/sourcemaps')(env),
         require('./features/compress')(env),
         require('./features/zip')(env),
