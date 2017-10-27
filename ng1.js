@@ -10,7 +10,6 @@ const defaults = {
     root: null,
     port: null,
     production: false,
-    analyze: false,
     profile: false,
     zip: false
 }
@@ -31,8 +30,7 @@ module.exports = function (env, options) {
         require('./features/compress')(env),
         require('./features/zip')(env),
         require('./features/dev-server')(env),
-        require('./features/analyze')(env),
-        require('./features/stats')(env),
+        require('./features/profile')(env),
         // Frameworks
         require('./frameworks/ng1')(env)
     )
