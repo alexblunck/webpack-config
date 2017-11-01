@@ -63,7 +63,7 @@ const config = require('./lib/webpack-config/react')
 
 **Specific Dependencies**
 ```bash
-npm install --save-dev --save-exact babel-preset-react babel-plugin-transform-react-jsx-img-import react-hot-loader
+npm install --save-dev --save-exact babel-preset-react babel-plugin-transform-react-jsx-img-import react-hot-loader babel-plugin-inline-react-svg
 ```
 
 **Hot Module Replacement**

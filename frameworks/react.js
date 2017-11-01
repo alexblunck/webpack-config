@@ -10,7 +10,18 @@ module.exports = function (env) {
 
     const babelPlugins = [
         'syntax-dynamic-import',
-        'transform-react-jsx-img-import'
+        'transform-react-jsx-img-import',
+        ['inline-react-svg', {
+            svgo: {
+                plugins: [
+                    {
+                        removeAttrs: {
+                            attrs: '(data-color)'
+                        }
+                    }
+                ]
+            }
+        }]
     ]
 
     // Hot module replacement
