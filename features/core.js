@@ -16,6 +16,11 @@ module.exports = function (env) {
         entry: {
             app: './src/index.js',
         },
+        resolve: {
+            // Fixes potential issues with "npm link". I.e. babel looking for plugins
+            // in linked package node_modules.
+            symlinks: false
+        },
         output: {
             path: path.resolve(env.root, 'dist'),
             filename: filename,
