@@ -3,15 +3,17 @@
  * react
  */
 
+const path = require('path')
+
 module.exports = function (env) {
     const entry = {
-        app: [ './src/index.jsx' ]
+        app: [ path.join(env.root, 'src/index.jsx') ]
     }
 
     const babelPlugins = [
-        'syntax-dynamic-import',
-        'transform-react-jsx-img-import',
-        'inline-react-svg'
+        // require('babel-plugin-syntax-dynamic-import'),
+        // require('babel-plugin-transform-react-jsx-img-import'),
+        // require('babel-plugin-inline-react-svg')
     ]
 
     // Hot module replacement
